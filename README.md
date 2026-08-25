@@ -1,6 +1,6 @@
 # Sistema-de-Gestion-de-Rutas
 
-# 🚍 Plan de Desarrollo por Fases — Sistema de Colectivos
+#  Plan de Desarrollo por Fases — Sistema de Colectivos
 
 ## Resumen Ejecutivo
 
@@ -43,8 +43,8 @@ gantt
 
 ---
 
-## FASE 1: Fundación del Sistema 🏗️
-> **Prioridad: 🔴 CRÍTICA** — Sin esto no existe nada
+## FASE 1: Fundación del Sistema 
+> **Prioridad:  CRÍTICA** — Sin esto no existe nada
 > **Estimación: ~2 semanas**
 
 ### Objetivo
@@ -86,7 +86,7 @@ Rol             → Admin, Operador, Inspector, Conductor
 - [ ] Carga de datos iniciales (fixtures) para pruebas
 
 ### Entregable Fase 1
-✅ Admin funcional donde se pueden crear empresas, líneas, rutas, paradas, unidades y conductores. Base de datos PostgreSQL configurada.
+ Admin funcional donde se pueden crear empresas, líneas, rutas, paradas, unidades y conductores. Base de datos PostgreSQL configurada.
 
 ### Estructura de archivos — Fase 1
 ```
@@ -119,8 +119,8 @@ Proyecto/
 
 ---
 
-## FASE 2: API Transaccional de Pagos 💳
-> **Prioridad: 🔴 CRÍTICA** — El core del negocio
+## FASE 2: API Transaccional de Pagos 
+> **Prioridad:  CRÍTICA** — El core del negocio
 > **Estimación: ~2.5 semanas**
 > **Depende de: Fase 1**
 
@@ -168,12 +168,12 @@ LoteSync        → Lote de transacciones sincronizadas desde unidad offline
 - [ ] Test de idempotencia (mismo pago enviado 2 veces)
 
 ### Entregable Fase 2
-✅ API REST funcional que puede recibir pagos, validar idempotencia, consultar saldos y recaudación. Documentada con Swagger/OpenAPI.
+ API REST funcional que puede recibir pagos, validar idempotencia, consultar saldos y recaudación. Documentada con Swagger/OpenAPI.
 
 ---
 
-## FASE 3: Frontend Responsivo 📱
-> **Prioridad: 🟡 ALTA** — Interfaz para operar el sistema
+## FASE 3: Frontend Responsivo 
+> **Prioridad:  ALTA** — Interfaz para operar el sistema
 > **Estimación: ~2.5 semanas**
 > **Depende de: Fase 1 y 2**
 
@@ -218,12 +218,12 @@ Django Templates + HTMX + Alpine.js
 - [ ] PWA manifest para "instalar" como app
 
 ### Entregable Fase 3
-✅ Dashboard web completo, responsivo, funcional en celulares y escritorio. Los operadores pueden gestionar la flota y ver recaudación desde el teléfono.
+ Dashboard web completo, responsivo, funcional en celulares y escritorio. Los operadores pueden gestionar la flota y ver recaudación desde el teléfono.
 
 ---
 
-## FASE 4: Sincronización Offline y Resiliencia 🔄
-> **Prioridad: 🟠 MEDIA-ALTA** — Necesario para producción real
+## FASE 4: Sincronización Offline y Resiliencia 
+> **Prioridad:  MEDIA-ALTA** — Necesario para producción real
 > **Estimación: ~2 semanas**
 > **Depende de: Fase 2**
 
@@ -259,12 +259,12 @@ LogSync         → Historial de sincronizaciones exitosas/fallidas
 - [ ] Health checks y monitoring básico
 
 ### Entregable Fase 4
-✅ Sistema resiliente que soporta unidades offline, procesa lotes de sincronización, y tiene infraestructura de producción lista.
+ Sistema resiliente que soporta unidades offline, procesa lotes de sincronización, y tiene infraestructura de producción lista.
 
 ---
 
-## FASE 5: Analítica y Data Warehouse 📊
-> **Prioridad: 🟢 MEDIA** — Valor agregado, no bloquea operación
+## FASE 5: Analítica y Data Warehouse 
+> **Prioridad:  MEDIA** — Valor agregado, no bloquea operación
 > **Estimación: ~2.5 semanas**
 > **Depende de: Fase 2 y 4**
 
@@ -298,44 +298,30 @@ DimMedioPago    → Dimensión medio de pago
 - [ ] Endpoints de datos agregados para visualización externa
 
 ### Entregable Fase 5
-✅ Data warehouse funcional con modelo estrella, reportes avanzados de recaudación, y capacidad de análisis histórico.
+ Data warehouse funcional con modelo estrella, reportes avanzados de recaudación, y capacidad de análisis histórico.
 
 ---
 
-## 📋 Resumen de Fases
+##  Resumen de Fases
 
 | Fase | Nombre | Prioridad | Estimación | Depende de |
 |---|---|---|---|---|
-| **1** | Fundación del Sistema | 🔴 Crítica | ~2 semanas | — |
-| **2** | API Transaccional | 🔴 Crítica | ~2.5 semanas | Fase 1 |
-| **3** | Frontend Responsivo | 🟡 Alta | ~2.5 semanas | Fases 1, 2 |
-| **4** | Resiliencia y Sync | 🟠 Media-Alta | ~2 semanas | Fase 2 |
-| **5** | Analítica y DW | 🟢 Media | ~2.5 semanas | Fases 2, 4 |
+| **1** | Fundación del Sistema |  Crítica | ~2 semanas | — |
+| **2** | API Transaccional |  Crítica | ~2.5 semanas | Fase 1 |
+| **3** | Frontend Responsivo |  Alta | ~2.5 semanas | Fases 1, 2 |
+| **4** | Resiliencia y Sync |  Media-Alta | ~2 semanas | Fase 2 |
+| **5** | Analítica y DW |  Media | ~2.5 semanas | Fases 2, 4 |
 
 > **Tiempo total estimado: ~11.5 semanas** (asumiendo 1 desarrollador a tiempo completo)
 
 ```mermaid
 graph LR
-    F1["🏗️ Fase 1\nFundación"] --> F2["💳 Fase 2\nAPI Pagos"]
-    F1 --> F3["📱 Fase 3\nFrontend"]
+    F1[" Fase 1\nFundación"] --> F2[" Fase 2\nAPI Pagos"]
+    F1 --> F3[" Fase 3\nFrontend"]
     F2 --> F3
-    F2 --> F4["🔄 Fase 4\nResiliencia"]
-    F2 --> F5["📊 Fase 5\nAnalítica"]
+    F2 --> F4[" Fase 4\nResiliencia"]
+    F2 --> F5[" Fase 5\nAnalítica"]
     F4 --> F5
 ```
 
 ---
-
-## 🚀 ¿Empezamos?
-
-Si apruebas este plan, comenzaremos con la **Fase 1** inmediatamente:
-
-1. Reestructurar el proyecto (settings split, apps directory)
-2. Configurar Docker Compose (PostgreSQL + Redis)
-3. Crear el modelo de usuario personalizado
-4. Crear los modelos de flota
-5. Configurar el admin
-
-> [!IMPORTANT]
-> ¿Deseas ajustar alguna fase, cambiar prioridades, o agregar/quitar funcionalidades antes de empezar?
-
