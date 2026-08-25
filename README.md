@@ -1,5 +1,3 @@
-# Sistema-de-Gestion-de-Rutas
-
 #  Plan de Desarrollo por Fases — Sistema de Colectivos
 
 ## Resumen Ejecutivo
