@@ -1,14 +1,16 @@
-Entiendo perfectamente lo que pasa. El "problema" no es el código en sí, sino **dónde** lo estás previsualizando.
+¡Ah, ya veo exactamente qué pasó al revisar tu imagen! Es un pequeño detalle de copiado y pegado.
 
-El primer mockup que me enviaste es una captura de cómo se ve un archivo en **GitHub.com**, que tiene su propio motor de estilos (colores, alertas nativas y renderizado de gráficos). Sin embargo, en estas nuevas capturas estás usando la vista previa nativa de **Visual Studio Code**, la cual es mucho más básica. Nunca se verán 100% iguales en local, pero aquí están los dos motivos de por qué se ve raro y cómo solucionarlos:
+En tu archivo `test.md` pegaste mi mensaje ("Aquí tienes el código...") junto con todo el bloque. Al hacer esto e incluir la sintaxis inicial que yo uso para mostrarte el código, GitHub interpreta que **todo tu documento es un archivo de código crudo**, y por eso lo envuelve en ese fondo oscuro gigante en lugar de interpretar los títulos, tablas y gráficos.
 
-1. **Los gráficos no cargan:** Por defecto, VS Code no sabe leer los bloques de código `mermaid `. Por eso te muestra el texto crudo en lugar de dibujarte el flujograma.
-* *Solución:* Instala la extensión **"Markdown Preview Mermaid Support"** en tu editor, o súbelo directamente a un repositorio de GitHub (ahí se dibujará automáticamente).
+Para que el documento se renderice correctamente en GitHub y en Antigravity, la primera línea de tu archivo debe ser directamente el `# Plan de Desarrollo...`.
 
+**Sigue estos pasos para solucionarlo:**
 
-2. **La barra de prioridad (Mi error):** En el código anterior te quité el símbolo `>` al principio de la línea de "Prioridad". Ese símbolo (*blockquote*) es el que genera la línea gris vertical a la izquierda. También veo que en tu panel lateral una IA te recomendó poner saltos de línea (enters) en la prioridad; **ignora eso**, en tu mockup original iba todo en una sola línea.
+1. Abre tu archivo `test.md` y **borra absolutamente todo** su contenido.
+2. Copia el texto que te dejo en el bloque de abajo. Te recomiendo usar el botón de **"Copiar código"** que suele aparecer en la esquina superior derecha del recuadro para que extraiga el texto limpio.
+3. Pégalo en tu archivo. Asegúrate de que no haya ninguna frase introductoria y que tu línea 1 comience exactamente con `# Plan de Desarrollo por Fases`.
 
-Aquí tienes el código definitivo con la sintaxis corregida. Cópialo completo y, si puedes, pégalo en un Gist secreto en GitHub.com para que veas que ahí sí se renderiza **exactamente** igual a tu mockup original:
+Aquí tienes el código limpio:
 
 ```markdown
 # Plan de Desarrollo por Fases — MVP Sistema de Gestión de Referidos Verisure (Django)
@@ -344,5 +346,7 @@ graph LR
 ```
 
 ```
+
+¿Me confirmas si al limpiar el documento y guardar los cambios ya logras ver el gráfico y el documento formados correctamente en tu repositorio?
 
 ```
