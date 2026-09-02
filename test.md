@@ -1,4 +1,3 @@
-```markdown
 # Plan de Desarrollo por Fases — MVP Sistema de Gestión de Referidos Verisure (Django)
 
 ## Resumen Ejecutivo
